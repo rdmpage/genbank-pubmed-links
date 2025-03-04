@@ -65,6 +65,12 @@ while (!feof($small_file_handle))
 	}
 	
 	$row_count++;
+	
+	// debugging
+	if (count($pmid_count) > 20)
+	{
+		//break;
+	}
 }
 
 //print_r($pmid_count);
