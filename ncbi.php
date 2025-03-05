@@ -178,8 +178,11 @@ function pmid_to_csl($pmid)
 					}				
 				}
 			}
-		
-			$csl->title = $obj->result->{$pmid}->title;
+			
+			if (isset( $obj->result->{$pmid}->title))
+			{		
+				$csl->title = $obj->result->{$pmid}->title;
+			}
 		}
 		
 	}
