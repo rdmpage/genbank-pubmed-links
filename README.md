@@ -14,9 +14,11 @@ Accession numbers from BOLD can be found in their data dumps. Some accessions ha
 
 ## Database
 
-We have a simple SQLite database to store the links between GenBank and PubMed.
+We have a simple SQLite database to store the links between GenBank and PubMed. The `accession_pmid` table includes a column called `flag` where we can insert, say, `1` to flag a record that has problems, such as a PMID that does not resolve. Examples include [27797954](https://pubmed.ncbi.nlm.nih.gov/27797954/) which redirects to [28172670](https://pubmed.ncbi.nlm.nih.gov/28172670/).
 
 ### Views
+
+The database has views to display accessions that lack a PMID, or are poorly formed, and PMIDs that don’t resolve.
 
 ## Scripts
 
