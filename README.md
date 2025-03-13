@@ -12,6 +12,10 @@ Rather than store all of these, the goal is to extract a subset of links based o
 
 Accession numbers from BOLD can be found in their data dumps. Some accessions have suffixes indicating that the records have been suppressed (e.g., `GU654642-SUPPRESSED`) or withdrawn (e.g., `HQ974947-WITHDRAWN`). Some accessions may also contain spurious characters, e.g. `ï»¿JN303723-WITHDRAWN`.
 
+### ORCID
+
+Given a DOI we can use the [ORCID](https://orcid.org) API to attempt to find the ORCID(s) for any of that paper’s authors. We can then populate a table of author details from ORCID by retrieving data for the ORCID as JSON-LD. One potenial use is to try and match people who have identified specimens in BOLD with those who have authored barcode papers.
+
 ## Database
 
 We use a simple SQLite database to store the links between GenBank and PubMed. The `accession_pmid` table includes a column called `flag` where we can insert, say, `1` to flag a record that has problems, such as a PMID that does not resolve. Examples include [27797954](https://pubmed.ncbi.nlm.nih.gov/27797954/) which redirects to [28172670](https://pubmed.ncbi.nlm.nih.gov/28172670/).
