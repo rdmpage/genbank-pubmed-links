@@ -5,3 +5,4 @@ data/insdc_acs.csv
 gbpmid.db-shm
 gbpmid.db-wal
 /junk/
+data/bold-sampleid-no-insdc.csv

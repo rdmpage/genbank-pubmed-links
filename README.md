@@ -10,7 +10,9 @@ Rather than store all of these, the goal is to extract a subset of links based o
 
 ### BOLD
 
-Accession numbers from BOLD can be found in their data dumps. Some accessions have suffixes indicating that the records have been suppressed (e.g., `GU654642-SUPPRESSED`) or withdrawn (e.g., `HQ974947-WITHDRAWN`). Some accessions may also contain spurious characters, e.g. `ï»¿JN303723-WITHDRAWN`.
+Accession numbers from BOLD can be found in their data dumps in the `insdc_acs` field. Some accessions have suffixes indicating that the records have been suppressed (e.g., `GU654642-SUPPRESSED`) or withdrawn (e.g., `HQ974947-WITHDRAWN`). Some accessions may also contain spurious characters, e.g. `ï»¿JN303723-WITHDRAWN`.
+
+Note that nearly 500K BOLD records state they were `Mined from GenBank, NCBI` but have an empty `insdc_acs` field. The GenBank accession is in the `sampleid` field.
 
 ### ORCID
 

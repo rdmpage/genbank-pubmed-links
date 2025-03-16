@@ -33,6 +33,7 @@ $matched_pmids = array();
 
 // get accession numbers and look up
 $small_filename = 'data/insdc_acs.csv';
+$small_filename = 'bold-sampleid-no-insdc.tsv';
 
 $row_count = 0;
 
